@@ -17,17 +17,24 @@ namespace GuiPackager
         public Form1()
         {
             InitializeComponent();
+            buttonGet.Click += ButtonGet_Click;
         }
 
-        public void Packager()
+        private void ButtonGet_Click(object sender, EventArgs e)
+        {
+            Package();
+        }
+
+        public void Package()
         {
             //https://habr.com/ru/post/85480/
             //https://github.com/elw00d/nbox
             //https://overcoder.net/q/1177089/работа-с-событием-appdomainassemblyresolve
-            var fileInputName = @"OneExeProgram\Libraries\AutoMapper 1.0 RTW\AutoMapper.dll";
+            OpenFileDialog ofd = new OpenFileDialog();
+            var fileInputName = ofd.OpenFileDialogReturnPath(Properties.Resources.DialogDllFiles,"Выберите файл для создания сжатой версии:");
             var assembly = File.ReadAllBytes(fileInputName);
 
-            var fileOutputName = @"OneExeProgram\Libraries\AutoMapper 1.0 RTW\AutoMapper.dll.deflated";
+            var fileOutputName =$"{fileInputName}.deflated";
             using (var file = File.Open(fileOutputName, FileMode.Create))
             using (var stream = new DeflateStream(file, CompressionMode.Compress))
             using (var writer = new BinaryWriter(stream))
