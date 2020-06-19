@@ -21,7 +21,9 @@ namespace GuiPackager
 
         public void Packager()
         {
-
+            //https://habr.com/ru/post/85480/
+            //https://github.com/elw00d/nbox
+            //https://overcoder.net/q/1177089/работа-с-событием-appdomainassemblyresolve
             var fileInputName = @"OneExeProgram\Libraries\AutoMapper 1.0 RTW\AutoMapper.dll";
             var assembly = File.ReadAllBytes(fileInputName);
 
