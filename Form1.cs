@@ -31,7 +31,10 @@ namespace GuiPackager
             //https://github.com/elw00d/nbox
             //https://overcoder.net/q/1177089/работа-с-событием-appdomainassemblyresolve
             OpenFileDialog ofd = new OpenFileDialog();
-            var fileInputName = ofd.OpenFileDialogReturnPath(Properties.Resources.DialogDllFiles,"Выберите файл для создания сжатой версии:");
+            var fileInputName = ofd
+                .OpenFileDialogReturnPath(
+                Properties.Resources.DialogDllFiles,
+                "Выберите файл для создания его сжатой версии:");
             var assembly = File.ReadAllBytes(fileInputName);
 
             var fileOutputName =$"{fileInputName}.deflated";
@@ -41,6 +44,8 @@ namespace GuiPackager
             {
                 writer.Write(assembly);
             }
+
+            MessageBox.Show("Готово!");
         }
     }
 }
