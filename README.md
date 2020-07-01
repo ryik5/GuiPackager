@@ -1,12 +1,12 @@
 ### GUI Packager
-Making of packed(Deflate) files of project's libraries for embedding into the assebly .NET
+Maker of packed(Deflate) files of project's libraries for embedding into the assembly .NET
 
 It is maintained by [@ryik5](https://github.com/ryik5).
 
 
 ## What?
 
-This application makes packed(Deflate) files those could be used as embedded resources in asseblies.
+This application makes packed(Deflate) files those could be used as embedded resources in assemblies.
 
 ## Quickstart
 
