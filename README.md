@@ -1,5 +1,5 @@
 ## GUI Packager
-Maker of packed(Deflate) files of project's libraries for embedding into the assembly .NET
+Maker of packed(Deflate) files of project's libraries for embedding into the freshly making assembly .NET
 
 It is maintained by [@ryik5](https://github.com/ryik5).
 
