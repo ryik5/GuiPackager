@@ -61,7 +61,7 @@ namespace GuiPackager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Библиотеки (*.dll)|*.dll|All files (*.*)|*.*.
+        ///   Looks up a localized string similar to Библиотеки (*.dll)|*.dll|Сжатые файлы (*.deflated)|*.deflated|All files (*.*)|*.*.
         /// </summary>
         internal static string DialogDllFiles {
             get {

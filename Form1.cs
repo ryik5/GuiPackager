@@ -37,8 +37,10 @@ namespace GuiPackager
             using (var writer = new BinaryWriter(stream))
             {
                 writer.Write(assembly);
+                writer.Flush();
             }
 
+            textBoxLog.AppendText($"'{fileInputName}'  =>  '{fileOutputName}' - сжат!{Environment.NewLine}");
             MessageBox.Show("Готово!");
         }
 
